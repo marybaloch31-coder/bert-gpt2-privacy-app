@@ -81,16 +81,33 @@ def load_model(task, repo):
 
 
 # ------------------------------- Sidebar -------------------------------
+
+# ------------------------------- Sidebar -------------------------------
 with st.sidebar:
     st.header("📌 About")
+
     st.write(
         "A class project that compares two Transformer types:\n\n"
         "- **BERT** (encoder-only): understands text\n"
         "- **GPT-2** (decoder-only): generates text"
     )
+
     st.markdown(
         f"""
-**Models**
+        **Models**
 
-- [BERT privacy detector](https://huggingface.co/{BERT_REPO})
-- [GPT-2 text generation](https://huggingface.co/{GPT_REPO})
+        - [BERT Privacy Detector](https://huggingface.co/{BERT_REPO})
+        - [GPT-2 Text Generation](https://huggingface.co/{GPT_REPO})
+
+        **Code**
+
+        - [GitHub Repository]({GITHUB_URL})
+        """
+    )
+
+    st.warning(
+        "Please use **fake sample data** only. "
+        "Do not type your real CNIC, phone number, password, "
+        "card number or OTP into this public demo."
+    )
+
